@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assests/css/base.css">
+    <link rel="stylesheet" href="/assests/css/main.css">
+    <link rel="stylesheet" href="/assests/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="/assests/fonts/fontawesome-free-5.12.1-web/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="app_container">
+            <div class="intro">
+                <img src="/assests/img/first_img.jpg" alt="" style="filter: brightness(60%);">
+                <div class="intro_title">
+                    <h1>Travel Hotel</h1>
+                    <span>Đẹp, giá rẻ và tiện nghi</span>
+                    <button class="btn btn-hover">Đặt Phòng Ngay</button>
+                </div>
+                <input type="checkbox" name="" id="navbar_show" class="menu_show" style="display: none;">
+                <label for="navbar_show" class="modal_menu"></label>
+                <div class="menu_wrap">
+                    <div class="menu_btn_wrap" ">
+                        <div class="btn_menu_click" onclick="menu_active('menu_btn_id'),span_menu_active('span_menu')">
+                            <label for="navbar_show" id="menu_btn_id" class="menu_btn">
+                                <i class="fas fa-bars" id="span_menu"></i>
+                                <span class="c-0" id="span_menu">Menu</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="logo">
+                            Travel Hotel
+                        </div>
+                        <ul class="menu_list">
+                            <li class="menu_items">
+                                <a href="" class="menu_items_link">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="menu_items">
+                                <a href="" class="menu_items_link">
+                                    Contact
+                                </a>
+                            </li>
+                            <li class="menu_items">
+                                <a href="" class="menu_items_link">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="menu_items">
+                                <a href="" class="menu_items_link">
+                                    Report Bug
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="follow">
+                            <span>Follow</span>
+                            <ul class="follow_list">
+                                <li class="follow_items">
+                                    <a href="" class="follow_link hover fb">
+                                        <i class="fab fa-facebook-square"></i>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li class="follow_items">
+                                    <a href="" class="follow_link hover ig">
+                                        <i class="fab fa-instagram"></i>
+                                        <span>Instargram</span>
+                                    </a>
+                                </li>
+                                <li class="follow_items">
+                                    <a href="" class="follow_link hover tw">
+                                        <i class="fab fa-twitter"></i>
+                                        <span>Twitter</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="qr_code c-0">
+                            <span>Application</span>
+                            <div class="qr-code-img">
+                                <img src="/assests/img/qr_code.png" alt="">
+                            </div>
+                            <div class="application-store">
+                                <div class="gg-play hover">
+                                    <img src="/assests/img/app_ggplay.png" alt="">
+                                </div>
+                                <div class="app-store hover">
+                                    <img src="/assests/img/app_store.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app_content">
+                <div class="grid">
+                    <div class="wide">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-12">
+                                <div class="room">
+                                    <label for="form_show" class="btn btn_book">Đặt phòng</label>
+                                    <div class="room_detail">
+                                        <span>Số giường: 2</span>
+                                        <span>Loại phòng: Gia đình</span>
+                                        <span>Máy nước nóng lạnh</span>
+                                    </div>
+                                    <div class="room_vip">
+                                    </div>
+                                    <div class="room_label">
+                                        <span>Phòng V.I.P</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-6 m-6 c-12">
+                                <div class="room">
+                                    <label for="form_show" class="btn btn_book">Đặt phòng</label>
+                                    <div class="room_detail">
+                                        <span>Số giường: 1</span>
+                                        <span>Loại phòng: Couple</span>
+                                        <span>Ghế tình nhân</span>
+                                    </div>
+                                    <div class="room_nor">
+                                    </div>
+                                    <div class="room_label">
+                                        <span>Phòng Thường</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" name="" id="form_show" class="form_booking_show">
+            <label for="form_show" class="modal_menu"></label>
+            <div class="form_booking">
+                <h2>Thông tin đặt phòng</h2>
+                <ul class="booking_info">
+                    <li class="booking_info_item">
+                        <span>Họ và Tên</span>
+                        <input type="text">
+                    </li>
+                    <li class="booking_info_item">
+                        <span>Số điện thoại</span>
+                        <input type="text">
+                    </li>
+                    <li class="booking_info_item">
+                        <span>Địa chỉ email</span>
+                        <input type="text">
+                    </li>
+                </ul>
+                <div class="booking_form_control">
+                    <label for="form_show" class="btn buton btn_back">Trở lại</label>
+                    <button class="btn buton">Đặt phòng</button>
+                </div>
+            </div>
+            <div class="description">
+                <div class="grid">
+                    <div class="wide">
+                        <div class="row">
+                            <div class="paragraph">
+                                <span>Hãy cùng tận hưởng dịch vụ 5* tại những khách sạn mà bạn yêu thích. Chúng tôi sẽ giúp bạn có những trải nghiệm tuyệt vời, giúp bạn có một kì nghỉ đáng nhớ cùng gia đình và người thân. Cùng có một kì nghỉ đáng nhớ với Travel Hotel</span>
+                            </div>
+                            <div class="picture">
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_vip.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_nor.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/first_img.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_vip.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_nor.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/first_img.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_vip.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_nor.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-4 c-4">
+                                    <div class="img_child">
+                                        <img src="/assests/img/room_nor.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="grid">
+            <div class="wide">
+                <div class="row">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="contact">
+                            <span style="font-weight: bold; padding: 10px 0; display: block;">Liên Hệ</span>
+                            <div class="address">
+                                <span>179 Trần Tuấn Khải, phường 5, quận 5, Tp.Hồ Chí Minh</span>
+                            </div>
+                            <div class="phone">
+                                <div class="phone-num">
+                                    <span>SĐT: 09000001</span>
+                                </div>
+                            </div>
+                            <div class="mail">
+                                <span>contac@company.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="subscribe-for-new">
+                            <span style="font-weight: bold; padding: 10px 0; display: block;">Đăng Kí Nhận Bản Tin</span>
+                            <div class="subscribe-form">
+                                <p>Đăng kí để nhận được nhiều ưu đãi</p>
+                                <input type="text" style="display: block; width: 80%; margin: 0 auto; margin-top: 10px; padding: 4px 0;">
+                            </div>
+                            <button style="padding: 8px; background-color: var(--orange-); border: none;color: white; border-radius: 2px;margin-top: 4px;">Đăng kí</button>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="partner">
+                            <span style="font-weight: bold; padding: 10px 0; display: block;">Đối tác</span>
+                            <img src="/assests/img/partner.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/assests/js/index.js"></script>
+</body>
+</html>

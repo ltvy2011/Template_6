@@ -1,0 +1,494 @@
+.app_container{
+    background-color: #eee8e3;
+}
+.app_content{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+footer{
+    display: flex;
+    background-color: rgb(206, 134, 82);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer p{
+    font-size: 1.4rem;
+}
+.intro{
+    position: relative;
+    width: 100%;
+}
+
+.intro_title{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.intro_title h1{
+    animation: floatRight ease-in-out 0.65s;
+    opacity: 0;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.intro_title span{
+    font-size: 2rem;
+    margin: 20px 0 30px 0;
+    animation: floatRight ease-in-out 0.65s;
+    animation-delay: 0.75s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.intro_title button{
+    animation: floatRight ease-in-out 0.65s;
+    animation-delay: 1.25s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes floatRight{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-10%);
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.modal_menu{
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    animation: fadeIn ease-in-out 0.2s;
+}
+.menu_wrap{
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    transition: all ease-in-out 0.2s;
+    transform: translateX(calc(100% - var(--menu-btn-width)));
+    z-index: 3;
+}
+.menu_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    right: 0;
+    font-size: 3rem;
+    color: chocolate;
+    background-color: white;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 10px;
+    width: var(--menu-btn-width);
+    transition: all ease-in-out 0.2s;
+    opacity: 0.7;
+}
+.span_menu--unactive{
+    display: none;
+}
+.menu_btn:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.menu_btn span{
+    padding-left: 10px;
+}
+
+.menu_show:checked ~ .menu_wrap{
+    transform: translateY(0%);
+    transition: all ease-in-out 0.2s;
+}
+.menu_show:checked ~ .menu_btn{
+    opacity: 1;
+}
+.menu_show:checked ~ .modal_menu{
+    display: block;
+}
+.menu{
+    position: relative;
+    background-color: white;
+    height: 100%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    padding-top: 20px;
+}
+.btn_close_menu{
+    position: absolute;
+    display: block;
+    font-size: 3rem;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: chocolate;
+}
+.menu--active{
+    opacity: 1;
+    transform: translateX(60%);
+    transition: all ease-in-out 0.2s;
+}
+
+.logo{
+    display: flex;
+    padding: 10px;
+    font-size: 2.2rem;
+    width: 90%;
+    justify-content: center;
+    font-weight: bold;
+    background-color: chocolate;
+    color: white;
+    border-radius: 20px;
+}
+.menu_list{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 60%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.menu_items{
+    font-size: 1.6rem;
+    padding: 10px;  
+    border-radius: 10px;
+    transition: all ease-out 0.2s;
+}
+.menu_items_link{
+    display: block;
+    color: black;
+}
+.menu_items:hover{
+    background-color: #ccc;
+    transition: all ease-out 0.2s;
+}
+.qr_code{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.qr-code-img{
+    width: 30%;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.application-store{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.gg-play{
+    display: block;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 4px;
+    position: relative;
+    right: -12px;
+}
+
+.app-store{
+    display: block;
+    position: relative;
+    right: -10px;
+    transform: scale(0.65);
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 8px 11px;
+}
+
+.follow{
+    width: 60%;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.follow_list{
+    width: 100%;
+}
+
+.follow_items{
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.follow_link{
+    display: flex;
+    color: black;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.follow_link span{
+    padding-left: 30px;
+}
+
+.fb{
+    color: #4267b2;
+}
+.fb:hover{
+    color: white;
+    background-color: #4267b2;
+}
+.ig{
+    color: #e4405f;
+}
+.ig:hover{
+    color: white;
+    background-color: #e4405f;
+}
+.tw{
+    color: #55acee;
+}
+.tw:hover{
+    color: white;
+    background-color: #55acee;
+}
+.room{
+    position: relative;
+    overflow: hidden;
+}
+.room_vip{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url(/assests/img/room_vip.jpg) no-repeat center top;
+    background-size: cover;
+    height: 38rem;
+    transform: scale(1);
+    transition: all ease-in-out 0.2s;
+}
+.room_vip:hover {
+    transform: scale(1.1);
+    filter: brightness(50%);
+    transition: all ease-in-out 0.2s forwards;
+}
+.room_nor{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url(/assests/img/room_nor.jpg) no-repeat center top;
+    background-size: cover;
+    height: 38rem;
+    transform: scale(1);
+    transition: all ease-in-out 0.2s;
+}
+.room_nor:hover {
+    transform: scale(1.1);
+    filter: brightness(50%);
+    transition: all ease-in-out 0.2s forwards;
+}
+.room:hover .btn_book{
+    transform: translateY(0);
+    transition: all ease-in-out 0.2s;
+    opacity: 1;
+}
+.room:hover .room_detail{
+    transform: translateY(0);
+    transition: all ease-in-out 0.2s;
+    opacity: 1;
+}
+.room_label{
+    display: block;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(210, 105, 30, 0.822);
+    padding: 5px;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.room_label span{
+    font-size: 3rem;
+}
+.btn_book{
+    position: absolute;
+    top: 70%;
+    margin-left: 30px;
+    background-color: black;
+    z-index: 1;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+}
+.room_detail{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 30px;
+    top: 30%;
+    z-index: 1;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    transform: translateY(50%);
+    color: white;
+}
+.room_detail span{
+    padding: 10px;
+}
+.btn_book:hover{
+    cursor: pointer;
+    background-color: chocolate;
+}
+.btn_book:hover ~ .room_vip{
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+.room_detail:hover ~ .room_vip{
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+.room_detail:hover ~ .room_nor{
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+.btn_book:hover ~ .room_nor{
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+
+.form_booking{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 2;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    align-items: center;
+    padding: 20px 0;
+    animation: fadeIn ease-in-out 0.2s;
+}
+
+.booking_info{
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.booking_info_item{
+    padding: 10px;
+}
+.booking_info_item input{
+    font-size: 1.6rem;
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+}
+.booking_form_control{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.btn_back{
+    background-color: white;
+    color: black;
+}
+.buton{
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.buton:hover{
+    cursor: pointer;
+}
+.btn_back:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+.form_booking_show{
+    display: none;
+}
+.form_booking_show:checked ~ .form_booking{
+    display: flex;
+}
+.form_booking_show:checked ~ .modal_menu{
+    display: block;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.paragraph{
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.picture{
+    background: url(/assests/img/first_img.jpg);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img_child{
+    display: block;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+.img_child:hover{
+    opacity: 1;
+    transition: all ease-in-out 0.2s;
+}
+.phone{
+    display: flex;
+}
+.phone-num{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.mail{
+    text-align: center;
+    align-items: center;
+}
+.partner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.partner img{
+    width: 50%;
+    background-color: white;
+}
